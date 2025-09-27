@@ -4,11 +4,11 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  template: `<h1>Curso de Angular</h1> `,
 })
 export class App {
   protected readonly title = signal('meu-primeiro-projeto-latest');
 }
 
 //<router-outlet />;
+//  <router-outlet></router-outlet>
