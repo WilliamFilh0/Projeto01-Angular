@@ -6,6 +6,13 @@ import { NewComponent } from './components/new-component/new-component';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, NewComponent],
+  styles: [
+    `
+      h1 {
+        color: darkblue;
+      }
+    `,
+  ],
   template: `<h1>Curso de Angular</h1>
     <app-new-component /> `,
 })
