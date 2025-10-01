@@ -1,0 +1,24 @@
+<h2>Template</h2>
+<h3>Text Interpolation</h3>
+<p>{{ name }} - {{ age }} - {{ sum(1, 2) }}</p>
+
+<p>{{ condition }}</p>
+
+<hr />
+<!--Serve pra propriedades e interferem na tela-->
+<h3>Property Binding</h3>
+<button [disabled]="isDisabled">Button</button>
+<img [src]="srcValue" [alt]="name" [title]="name" />
+
+<hr />
+<!-- Serve so pra atributos nâo interfere na tela(Dom) -->
+<h3>Attribute Binding</h3>
+<p [attr.title]="name" [attr.aria-label]="name">William Filho</p>
+
+<hr />
+<!-- Serve pra estilos com classes diretamente do css -->
+<h2>Class and Tyle binding</h2>
+<p [class.background-blue]="age < 32" [class.background-red]="age === 32">{{ name }}</p>
+
+<!--Serve pra acessar os valores dos Styles de forma dinamica-->
+<p [style.text-decoration]="isTextDecoration">{{ name }}</p>
