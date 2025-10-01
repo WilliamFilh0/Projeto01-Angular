@@ -1,6 +1,6 @@
 <h2>Template</h2>
 <h3>Text Interpolation</h3>
-<p>{{ name }} - {{ age }} - {{ sum(1, 2) }}</p>
+<p>{{ name }} - {{ age }}</p>
 
 <p>{{ condition }}</p>
 
@@ -17,8 +17,13 @@
 
 <hr />
 <!-- Serve pra estilos com classes diretamente do css -->
-<h2>Class and Tyle binding</h2>
-<p [class.background-blue]="age < 32" [class.background-red]="age === 32">{{ name }}</p>
+<h2>Class and Style binding</h2>
+<p [class.background-blue]="age < 32" [class.background-red]="age >= 32">{{ name }}</p>
 
 <!--Serve pra acessar os valores dos Styles de forma dinamica-->
-<p [style.text-decoration]="isTextDecoration">{{ name }}</p>
+<p [style.text-decoration]="isTextDecoration">{{ age }}</p>
+
+<hr />
+<h2>Event Binding</h2>
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>

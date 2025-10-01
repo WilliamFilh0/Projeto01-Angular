@@ -13,9 +13,14 @@ export class TemplateBindi {
   public condition = this.age < 1 ? 'teste' : 'teste2';
   public isDisabled = false;
   public srcValue = 'https://angular.io/assets/images/logos/angular/angular.png';
+
   public isTextDecoration = this.age >= 32 ? 'underline' : 'none';
 
-  public sum(val1: number, val2: number) {
-    return val1 + val2;
+  public sum() {
+    return this.age++;
+  }
+
+  public sub() {
+    return this.age--;
   }
 }
