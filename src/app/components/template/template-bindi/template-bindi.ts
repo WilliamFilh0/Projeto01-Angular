@@ -23,4 +23,15 @@ export class TemplateBindi {
   public sub() {
     return this.age--;
   }
+
+  public onKeyDown(event: Event) {
+    return console.log(event);
+  }
+
+  public onMouseMove(event: MouseEvent) {
+    return console.log({
+      clietX: event.clientX,
+      clientY: event.clientY,
+    });
+  }
 }

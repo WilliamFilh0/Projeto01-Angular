@@ -27,3 +27,9 @@
 <h2>Event Binding</h2>
 <button (click)="sum()">+</button>
 <button (click)="sub()">-</button>
+<input (keydown.shift.t)="onKeyDown($event)" />
+
+<div
+  style="background-color: red; height: 200px; margin-top: 10px"
+  (mousemove)="onMouseMove($event)"
+></div>
