@@ -33,3 +33,9 @@
   style="background-color: red; height: 200px; margin-top: 10px"
   (mousemove)="onMouseMove($event)"
 ></div>
+
+<hr />
+<h2>Two way binding</h2>
+<input [(ngModel)]="name" type="text" />
+
+{{ name }}
