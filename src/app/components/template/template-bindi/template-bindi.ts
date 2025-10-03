@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-template-bindi',
   imports: [CommonModule, FormsModule],
+  standalone: true,
   templateUrl: './template-bindi.html',
   styleUrl: './template-bindi.scss',
 })
