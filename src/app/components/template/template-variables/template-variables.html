@@ -1,1 +1,8 @@
-<h2>template-variables works!</h2>
+<!-- #variavel	Cria uma referência local no template
+{{ variavel.propriedade }}	Acessa algo desse elemento direto no HTML -->
+<h2 #h2>template-variables works!</h2>
+{{ h2.innerText }}
+<input #name value="William Filho" />
+{{ name.value }}
+
+<app-new-component></app-new-component>

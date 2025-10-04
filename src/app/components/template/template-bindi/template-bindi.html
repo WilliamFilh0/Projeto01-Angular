@@ -24,6 +24,7 @@
 <p [style.text-decoration]="isTextDecoration">{{ age }}</p>
 
 <hr />
+<!-- Serve pra eventos -->
 <h2>Event Binding</h2>
 <button (click)="sum()">+</button>
 <button (click)="sub()">-</button>
@@ -35,14 +36,15 @@
 ></div>
 
 <hr />
+<!-- Se o usuário digita algo no input, o valor da variável name muda automaticamente -->
 <h2>Two way binding</h2>
 <input [(ngModel)]="name" type="text" />
-
 {{ name }}
 
 <h3>Diretiva de Atributo</h3>
+<!--O [ngClass] aplica classes CSS dinamicamente com base em condições.-->
 <div [ngClass]="{ 'background-red': age > 30, 'background-blue': age < 35 }">
   Classes Condicionais
 </div>
-
+<!--O [ngStyle] aplica estilos CSS dinamicamente com base em condições.-->
 <div [ngStyle]="{ 'background-color': age > 30 ? 'green' : 'purple',  }">Estilo Dinamico.</div>
