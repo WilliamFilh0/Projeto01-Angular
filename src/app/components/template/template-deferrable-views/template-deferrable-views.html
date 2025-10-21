@@ -1,0 +1,14 @@
+<p>template-deferrable-views works!</p>
+
+<!-- O defer é usado para carregar componentes ou templates de forma adiada, ou seja, só carrega
+quando necessário, o placeholder é exibido enquanto o Angular ainda não iniciou o carregamento do componente, o loading é mostrado
+enquanto carrega e o error é mostrado caso dê algum erro ao carregar o componente ou template.-->
+@defer(){
+<app-new-component />
+}@placeholder{
+<p>Mostrar antes de carregar um componenete</p>
+} @loading{
+<p>Loading...</p>
+} @error{
+<p>Loading File</p>
+}

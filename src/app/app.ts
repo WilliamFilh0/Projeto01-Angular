@@ -7,6 +7,7 @@ import { RouterOutlet } from '@angular/router';
 //import { TemplateBindi } from './components/template/template-bindi/template-bindi';
 //import { TemplateVariables } from './components/template/template-variables/template-variables';
 import { TemplateControlFlow } from './components/template/template-control-flow/template-control-flow';
+import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
 
 @Component({
   selector: 'app-root',
@@ -17,14 +18,17 @@ import { TemplateControlFlow } from './components/template/template-control-flow
     //TemplateBindi,
     // TemplateVariables,
     TemplateControlFlow,
+    TemplateDeferrableViews,
   ],
 
   template: `
-    <h1>Curso de Angular</h1>
-    <!-- <app-new-component /> -->
+    <!-- <app-new-component /> 
     <!-- <app-template-bindi /> -->
     <!--<app-template-variables /> -->
-    <app-template-control-flow />
+    <!--<app-template-control-flow /> -->
+
+    <h1>Curso de Angular</h1>
+    <app-template-deferrable-views />
   `,
 })
 export class App {
