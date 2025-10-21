@@ -1,0 +1,72 @@
+<h2>template-control-flow works!</h2>
+<h3>IF</h3>
+
+@if(isTrue){
+<p>William</p>
+<p>Maria</p>
+} @else if(1===1){ 1 ===1 } @else{ Não esta correto }
+
+<!--Forma antiga-->
+<ng-container *ngIf="isTrue; else isFalse">
+  <p>William</p>
+  <p>Maria</p>
+</ng-container>
+<ng-template #isFalse>Não esta correto</ng-template>
+
+<!-- For -->
+
+@if(loadingData$ | async; as data){
+<ul>
+  @for(item of data; track item){
+  <li>{{ item }} - Teste</li>
+  }
+</ul>
+} @else{
+<p>Carregando...</p>
+}
+
+<!-- Outro for SEM IF -->
+<ul>
+  @for(item of loadingData$ | async; track item) {
+  <li>{{ item }} - Teste</li>
+  } @empty {
+  <p>Carregando...</p>
+  }
+</ul>
+<!-- Forma antiga -->
+<!--
+@for(item of loadingData$ | async; track item; else loading){
+<li>{{ item }} - Teste</li>
+} <ng-template #loading>Carregando...</ng-template>
+-->
+
+<!-- Mostrando dados de um array com variaveis locais -->
+@for(item of itens; track item.name; let i = $index; let c = $count; let f = $first; let l = $last;
+let e = $even; let o = $odd) {
+<p>
+  Name: {{ item.name }} - Index: {{ i }} - Count: {{ c }} - First: {{ f }} - Last: {{ l }} - Even:
+  {{ e }} - Odd: {{ o }} -
+</p>
+}
+
+<!-- Adicionando novos itens ao array -->
+<input #name type="text" placeholder="Digite seu nome" />
+<button (click)="addNewName(name.value)">Adicionar</button>
+
+<!-- @empty serve pra quando não se tm valores-->
+<ul>
+  @for(item of itens; track item.name) {
+  <li>{{ item.name }}</li>
+  } @empty {
+  <p>Nenhum item na lista</p>
+  }
+</ul>
+
+@switch(switichCondition) { @case('A') {
+<p>Sim sua Letra é A</p>
+} @case('B') {
+<p>Sim sua Letra B</p>
+} @default {
+<p>Não é A nem B</p>
+
+} }
