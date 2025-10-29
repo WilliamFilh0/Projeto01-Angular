@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Signals } from './components/components/signals/signals';
 
 //Componentes
 //import { NewComponent } from './components/new-component/new-component';
 //import { TemplateBindi } from './components/template/template-bindi/template-bindi';
 //import { TemplateVariables } from './components/template/template-variables/template-variables';
-import { TemplateControlFlow } from './components/template/template-control-flow/template-control-flow';
-import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
+//import { TemplateControlFlow } from './components/template/template-control-flow/template-control-flow';
+//import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,9 @@ import { TemplateDeferrableViews } from './components/template/template-deferrab
     //NewComponent,
     //TemplateBindi,
     // TemplateVariables,
-    TemplateControlFlow,
-    TemplateDeferrableViews,
+    //TemplateControlFlow,
+    //TemplateDeferrableViews,
+    Signals,
   ],
 
   template: `
@@ -26,9 +28,9 @@ import { TemplateDeferrableViews } from './components/template/template-deferrab
     <!-- <app-template-bindi /> -->
     <!--<app-template-variables /> -->
     <!--<app-template-control-flow /> -->
-
+    <!--<app-template-deferrable-views /> -->
     <h1>Curso de Angular</h1>
-    <app-template-deferrable-views />
+    <app-signals />
   `,
 })
 export class App {

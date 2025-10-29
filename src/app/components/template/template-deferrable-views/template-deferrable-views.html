@@ -3,7 +3,41 @@
 <!-- O defer é usado para carregar componentes ou templates de forma adiada, ou seja, só carrega
 quando necessário, o placeholder é exibido enquanto o Angular ainda não iniciou o carregamento do componente, o loading é mostrado
 enquanto carrega e o error é mostrado caso dê algum erro ao carregar o componente ou template.-->
-@defer(){
+
+<!--
+on idle: carrega quando o navegador está ocioso.
+
+on timer: carrega após um tempo definido (ex: 3s).
+
+on viewport: carrega quando o elemento entra na tela.
+
+on interaction: carrega quando o usuário interage (clique, foco etc).
+
+on hover: carrega quando o mouse passa sobre o elemento.
+
+on immediate: carrega imediatamente, sem esperar.
+
+on prefetch: pré-carrega antecipadamente, antes de ser necessário.
+
+Os triggers do @defer são avaliados com “OU” (OR) — ou seja, basta um deles acontecer para o conteúdo ser carregado.
+Exemplo: se houver interaction(trigger1) ou viewport(trigger2), qualquer um ativa o carregamento.
+
+O when no Angular define uma condição para o carregamento ou execução de algo.
+O conteúdo só será exibido quando essa condição for verdadeira.
+
+O minimum do placeholder define o tempo mínimo que o placeholder deve ficar visível. Mesmo que o conteúdo carregue rápido, ele garante que o usuário veja o @placeholder(minimum 5s) // Placeholder fica visível por pelo menos 5 segundos.
+
+after no loading → define um atraso antes de mostrar o loading. Se o conteúdo carregar antes desse tempo, o loading não aparece,  @after(200ms) // Loading aparece após 200 milissegundos.
+
+minimum no loading → garante que o loading fique visível pelo tempo mínimo, mesmo que o conteúdo carregue rápido. @after(200ms) @minimum(5s) // Loading aparece após 2 segundos e fica visível por pelo menos 5 segundos.
+
+O @error do @defer/@loading é exibido quando algo dá errado ao carregar o conteúdo.
+Isso inclui falha no servidor ou perda de conexão, como cair o Wi-Fi.
+-->
+<h2 #trigger>Deferrable Views</h2>
+<button (click)="isTrue = true">Add True</button>
+
+@defer(when loadingData$ | async) {
 <app-new-component />
 }@placeholder{
 <p>Mostrar antes de carregar um componenete</p>
