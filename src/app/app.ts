@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Signals } from './components/components/signals/signals';
+import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
 
 //Componentes
 //import { NewComponent } from './components/new-component/new-component';
@@ -21,6 +22,7 @@ import { Signals } from './components/components/signals/signals';
     //TemplateControlFlow,
     //TemplateDeferrableViews,
     Signals,
+    AngularPipes,
   ],
 
   template: `
@@ -30,7 +32,8 @@ import { Signals } from './components/components/signals/signals';
     <!--<app-template-control-flow /> -->
     <!--<app-template-deferrable-views /> -->
     <h1>Curso de Angular</h1>
-    <app-signals />
+    <!-- <app-signals /> -->
+    <app-angular-pipes />
   `,
 })
 export class App {
