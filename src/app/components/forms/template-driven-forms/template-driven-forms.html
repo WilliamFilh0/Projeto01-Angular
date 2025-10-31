@@ -63,4 +63,73 @@
   <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
   <p>touched : {{ sexo.touched }}</p>
   <hr />
+
+  <label>
+    Angular:
+    <input
+      type="checkbox"
+      value="Angular"
+      name="checkboxAngular"
+      #techAngular="ngModel"
+      [ngModel]="techAngular.value"
+      required
+    />
+  </label>
+
+  <hr />
+  <!-- O value informa o valor do campo-->
+  <p>value : {{ techAngular.value }}</p>
+  <!--O valid informa se o campo foi preenchido -->
+  <p>valid : {{ techAngular.valid }}</p>
+  <!-- O dirty informa se o campo foi sujo(preenchido) alguma vez -->
+  <p>dirty : {{ techAngular.dirty }}</p>
+  <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
+  <p>touched : {{ techAngular.touched }}</p>
+  <hr />
+
+  <label>
+    Vue:
+    <input
+      type="checkbox"
+      value="Vue"
+      name="checkboxVue"
+      #techVue="ngModel"
+      [ngModel]="techVue.value"
+      required
+    />
+  </label>
+
+  <hr />
+  <!-- O value informa o valor do campo-->
+  <p>value : {{ techVue.value }}</p>
+  <!--O valid informa se o campo foi preenchido -->
+  <p>valid : {{ techVue.valid }}</p>
+  <!-- O dirty informa se o campo foi sujo(preenchido) alguma vez -->
+  <p>dirty : {{ techVue.dirty }}</p>
+  <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
+  <p>touched : {{ techVue.touched }}</p>
+  <hr />
+
+  <label>
+    React:
+    <input
+      type="checkbox"
+      value="React"
+      name="checkboxReact"
+      #techReact="ngModel"
+      [ngModel]="techReact.value"
+      required
+    />
+  </label>
+
+  <hr />
+  <!-- O value informa o valor do campo-->
+  <p>value : {{ techReact.value }}</p>
+  <!--O valid informa se o campo foi preenchido -->
+  <p>valid : {{ techReact.valid }}</p>
+  <!-- O dirty informa se o campo foi sujo(preenchido) alguma vez -->
+  <p>dirty : {{ techReact.dirty }}</p>
+  <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
+  <p>touched : {{ techReact.touched }}</p>
+  <hr />
 </form>
