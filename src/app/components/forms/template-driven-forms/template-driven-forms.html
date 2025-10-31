@@ -132,4 +132,37 @@
   <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
   <p>touched : {{ techReact.touched }}</p>
   <hr />
+
+  <!--
+  <select name="selectComidas" #comidas="ngModel" ngModel>
+    <option value="">Selecione um alimento</option>
+    <option value="Comida 1">Comida 1</option>
+    <option value="Comida 2">Comida 2</option>
+  </select>
+
+  <hr />
+  <p>Value: {{ comidas.value }}</p>
+  <p>Valid: {{ comidas.valid }}</p>
+  <p>Dirty: {{ comidas.dirty }}</p>
+  <p>Touched: {{ comidas.touched }}</p>
+  <hr />
+-->
+
+  <!-- Use [ngValue] quando quiser vincular objetos ou tipos complexos.
+Use value apenas para strings simples. -->
+  <select name="selectComidas" #comidas="ngModel" ngModel>
+    <option value="">Selecione um alimento</option>
+    @for(item of listaComidas(); track item){
+    <option [ngValue]="item">{{ item.comida }}</option>
+    }
+  </select>
+
+  <hr />
+  <p>Value: {{ comidas.value | json }}</p>
+  <p>Value: {{ comidas.value?.comida }}</p>
+  <p>Value: {{ comidas.value?.preco }}</p>
+  <p>Valid: {{ comidas.valid }}</p>
+  <p>Dirty: {{ comidas.dirty }}</p>
+  <p>Touched: {{ comidas.touched }}</p>
+  <hr />
 </form>
