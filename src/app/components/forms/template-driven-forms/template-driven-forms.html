@@ -15,4 +15,52 @@
   <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
   <p>touched : {{ name.touched }}</p>
   <hr />
+
+  <!--Ja vem com um valor "Feminino" como default -->
+  <label>
+    Feminino:
+    <input
+      type="radio"
+      value="Feminino"
+      name="readioSexo"
+      #sexo="ngModel"
+      [ngModel]="sexo.value"
+      required
+    />
+  </label>
+
+  <label>
+    Masculino:
+    <input
+      type="radio"
+      value="Masculino"
+      name="readioSexo"
+      #sexo="ngModel"
+      [ngModel]="sexo.value"
+      required
+    />
+  </label>
+
+  <label>
+    Outros:
+    <input
+      type="radio"
+      value="Outros"
+      name="readioSexo"
+      #sexo="ngModel"
+      [ngModel]="sexo.value"
+      required
+    />
+  </label>
+
+  <hr />
+  <!-- O value informa o valor do campo-->
+  <p>value : {{ sexo.value }}</p>
+  <!--O valid informa se o campo foi preenchido -->
+  <p>valid : {{ sexo.valid }}</p>
+  <!-- O dirty informa se o campo foi sujo(preenchido) alguma vez -->
+  <p>dirty : {{ sexo.dirty }}</p>
+  <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
+  <p>touched : {{ sexo.touched }}</p>
+  <hr />
 </form>
