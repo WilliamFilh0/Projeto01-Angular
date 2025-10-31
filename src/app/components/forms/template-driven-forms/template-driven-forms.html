@@ -1,1 +1,18 @@
 <h2>Template-driven-forms</h2>
+<form>
+  <label>
+    Nome:
+    <input type="text" name="inputName" #name="ngModel" [ngModel]="name.value" required />
+  </label>
+
+  <hr />
+  <!-- O value informa o valor do campo-->
+  <p>value : {{ name.value }}</p>
+  <!--O valid informa se o campo foi preenchido -->
+  <p>valid : {{ name.valid }}</p>
+  <!-- O dirty informa se o campo foi sujo(preenchido) alguma vez -->
+  <p>dirty : {{ name.dirty }}</p>
+  <!-- O touched informa se o campo foi tocado (clicado) alguma vez -->
+  <p>touched : {{ name.touched }}</p>
+  <hr />
+</form>
