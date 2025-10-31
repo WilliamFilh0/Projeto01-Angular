@@ -10,6 +10,7 @@ import {
 } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
+import { CustomStringPipe } from '../../../pipes/custom-string-pipe';
 
 //Pipes Angular - Usando Pipes embutidos do Angular em um componente com signals ele serve para formatar datas, textos e JSON de forma reativa.
 @Component({
@@ -23,6 +24,7 @@ import { delay, Observable, of } from 'rxjs';
     CurrencyPipe,
     DecimalPipe,
     PercentPipe,
+    CustomStringPipe,
   ],
   templateUrl: './angular-pipes.html',
   styleUrl: './angular-pipes.scss',
