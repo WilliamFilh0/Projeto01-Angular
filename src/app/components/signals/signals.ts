@@ -15,6 +15,8 @@ export class Signals {
     return this.firstName() + ' ' + this.lastName();
   });
 
+  // Signals serve para gerenciar estados reativos de forma eficiente em aplicações Angular. Assim se eu mudar no valor de uma signal, todos os componentes ou computeds que dependem dessa signal serão automaticamente atualizados.
+
   public array = signal([1]);
 
   /* 

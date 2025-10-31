@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Signals } from './components/components/signals/signals';
-import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
 
 //Componentes
 //import { NewComponent } from './components/new-component/new-component';
@@ -10,6 +8,10 @@ import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
 //import { TemplateVariables } from './components/template/template-variables/template-variables';
 //import { TemplateControlFlow } from './components/template/template-control-flow/template-control-flow';
 //import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
+//import { Signals } from './components/signals/signals';
+//import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
+import { ReactiveForms } from './components/forms/reactive-forms/reactive-forms';
+import { TemplateDrivenForms } from './components/forms/template-driven-forms/template-driven-forms';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +23,10 @@ import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
     // TemplateVariables,
     //TemplateControlFlow,
     //TemplateDeferrableViews,
-    Signals,
-    AngularPipes,
+    //Signals,
+    //AngularPipes,
+    ReactiveForms,
+    TemplateDrivenForms,
   ],
 
   template: `
@@ -31,9 +35,13 @@ import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
     <!--<app-template-variables /> -->
     <!--<app-template-control-flow /> -->
     <!--<app-template-deferrable-views /> -->
-    <h1>Curso de Angular</h1>
     <!-- <app-signals /> -->
-    <app-angular-pipes />
+    <!-- <app-angular-pipes /> -->
+
+    <h1>Curso de Angular</h1>
+
+    <app-reactive-forms />
+    <app-template-driven-forms />
   `,
 })
 export class App {
