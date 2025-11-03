@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven-forms',
@@ -23,4 +23,12 @@ export class TemplateDrivenForms {
       preco: 'R$ 6',
     },
   ]);
+
+  public submitForm(form: NgForm) {
+    console.log(form.valid);
+
+    if (form.valid) {
+      console.log(form.value);
+    }
+  }
 }

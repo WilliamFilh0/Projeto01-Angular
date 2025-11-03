@@ -37,11 +37,11 @@ import { TemplateDrivenForms } from './components/forms/template-driven-forms/te
     <!--<app-template-deferrable-views /> -->
     <!-- <app-signals /> -->
     <!-- <app-angular-pipes /> -->
+    <!-- <app-template-driven-forms /> -->
 
     <h1>Curso de Angular</h1>
 
     <app-reactive-forms />
-    <app-template-driven-forms />
   `,
 })
 export class App {
