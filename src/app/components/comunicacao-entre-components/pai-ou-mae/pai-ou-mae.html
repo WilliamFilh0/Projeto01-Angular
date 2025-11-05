@@ -1,0 +1,9 @@
+<h2>Comunicação entre Components - Pai ou Mãe</h2>
+<!-- "Renderize o componente filho AQUI neste lugar, e passe esses dados para ele"
+-->
+<app-input-component [inputName]="name()"></app-input-component>
+<app-output-component (outputName)="outputNamePai.set($event)"></app-output-component>
+
+<p>
+  {{ outputNamePai() }}
+</p>

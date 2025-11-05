@@ -4,14 +4,15 @@ import { RouterOutlet } from '@angular/router';
 
 //Componentes
 //import { NewComponent } from './components/new-component/new-component';
-import { TemplateBindi } from './components/template/template-bindi/template-bindi';
+// import { TemplateBindi } from './components/template/template-bindi/template-bindi';
 //import { TemplateVariables } from './components/template/template-variables/template-variables';
 //import { TemplateControlFlow } from './components/template/template-control-flow/template-control-flow';
 //import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
 //import { Signals } from './components/signals/signals';
 //import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
-import { ReactiveForms } from './components/forms/reactive-forms/reactive-forms';
-import { TemplateDrivenForms } from './components/forms/template-driven-forms/template-driven-forms';
+// import { ReactiveForms } from './components/forms/reactive-forms/reactive-forms';
+// import { TemplateDrivenForms } from './components/forms/template-driven-forms/template-driven-forms';
+import { PaiOuMae } from './components/comunicacao-entre-components/pai-ou-mae/pai-ou-mae';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +20,15 @@ import { TemplateDrivenForms } from './components/forms/template-driven-forms/te
     RouterOutlet,
     CommonModule,
     //NewComponent,
-    TemplateBindi,
+    // TemplateBindi,
     // TemplateVariables,
     //TemplateControlFlow,
     //TemplateDeferrableViews,
     //Signals,
     //AngularPipes,
-    ReactiveForms,
-    TemplateDrivenForms,
+    // ReactiveForms,
+    // TemplateDrivenForms,
+    PaiOuMae,
   ],
 
   template: `
@@ -38,9 +40,10 @@ import { TemplateDrivenForms } from './components/forms/template-driven-forms/te
     <!-- <app-signals /> -->
     <!-- <app-angular-pipes /> -->
     <!-- <app-template-driven-forms /> -->
+    <!-- <app-reactive-forms /> -->
 
     <h1>Curso de Angular</h1>
-    <app-reactive-forms />
+    <app-pai-ou-mae />
   `,
 })
 export class App {
