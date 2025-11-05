@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 //import { TemplateDeferrableViews } from './components/template/template-deferrable-views/template-deferrable-views';
 //import { Signals } from './components/signals/signals';
 //import { AngularPipes } from './components/pipes/angular-pipes/angular-pipes';
-// import { ReactiveForms } from './components/forms/reactive-forms/reactive-forms';
+import { ReactiveForms } from './components/forms/reactive-forms/reactive-forms';
 // import { TemplateDrivenForms } from './components/forms/template-driven-forms/template-driven-forms';
 import { PaiOuMae } from './components/comunicacao-entre-components/pai-ou-mae/pai-ou-mae';
 
@@ -26,7 +26,7 @@ import { PaiOuMae } from './components/comunicacao-entre-components/pai-ou-mae/p
     //TemplateDeferrableViews,
     //Signals,
     //AngularPipes,
-    // ReactiveForms,
+    ReactiveForms,
     // TemplateDrivenForms,
     PaiOuMae,
   ],
@@ -40,10 +40,11 @@ import { PaiOuMae } from './components/comunicacao-entre-components/pai-ou-mae/p
     <!-- <app-signals /> -->
     <!-- <app-angular-pipes /> -->
     <!-- <app-template-driven-forms /> -->
-    <!-- <app-reactive-forms /> -->
+    <!--     <app-pai-ou-mae />
+    -->
 
     <h1>Curso de Angular</h1>
-    <app-pai-ou-mae />
+    <app-reactive-forms />
   `,
 })
 export class App {
