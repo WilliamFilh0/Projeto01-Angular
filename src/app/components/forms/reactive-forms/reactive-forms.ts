@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -22,15 +28,45 @@ FormGroup
 Pensa assim: é tipo uma lista de tarefas onde você pode adicionar ou remover itens.
 */
 export class ReactiveForms {
-  public profileForm = new FormGroup({
-    name: new FormControl(''),
-    myStacks: new FormGroup({
-      front: new FormControl('Angular'),
-      back: new FormControl('NodeJS'),
+  #fb = inject(FormBuilder);
+
+  public profileForm = this.#fb.group({
+    name: [''],
+    myStacks: this.#fb.group({
+      front: ['Angular'],
+      back: ['NodeJS'],
     }),
-    myFavoriteFoods: new FormArray([new FormControl('X-tudo')]),
+    myFavoriteFoods: this.#fb.array([['X-tudo']]),
   });
+
+  //public profileForm: FormGroup;
+
+  // Exemplo com FormBuilder
+  /* constructor(private _fb: FormBuilder) {
+    this.profileForm = this._fb.group({
+      name: [''],
+      myStacks: this._fb.group({
+        front: ['Angular'],
+        back: ['NodeJS'],
+      }),
+      myFavoriteFoods: this._fb.array([['X-tudo']]),
+    });
+  }
+*/
+
+  // Exemplo sem FormBuilder
+  // public profileForm = new FormGroup({
+  //   name: new FormControl(''),
+  //   myStacks: new FormGroup({
+  //     front: new FormControl('Angular'),
+  //     back: new FormControl('NodeJS'),
+  //   }),
+  //   myFavoriteFoods: new FormArray([new FormControl('X-tudo')]),
+  // });
+
   //name = new FormControl('');
+
+  // Atualizando valores em um FormGroup usando patchValue (Atualiza apenas os campos fornecidos)
   public update() {
     this.profileForm.patchValue({
       name: 'William',
@@ -41,6 +77,7 @@ export class ReactiveForms {
     });
   }
 
+  // Adicionando valores dinamicamente em um FormArray
   public addFavoriteFood(newFodd: string) {
     const myFavoriteFoods = this.profileForm.get('myFavoriteFoods') as FormArray;
     const addNewFood = new FormControl(newFodd);
